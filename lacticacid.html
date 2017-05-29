@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="myjs.js"></script>
+  <title>Lactic Acid</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-default"> 
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo_small.png">
+        </a>
+        
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown active">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ages <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="1112.html">11-12</a></li>
+              <li><a href="#">13-14</a></li>
+              <li><a href="#">15-16</a></li>
+              <li><a href="#">17-18</a></li>
+            </ul>
+          </li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+    </div>
+  </nav>
+
+  <ol class="breadcrumb">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="1112.html">Ages 11 - 12</a></li>
+    <li class="active">Lactic Acid</li>
+  </ol>
+
+  <div class="col-md-8 col-md-offset-2">
+    <div class="jumbotron">
+      <div class="insides">
+        <h2>Ages 11 - 12</h2>
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title"><b>Lactic Acid</b></h3>
+          </div>
+          <div class="panel-body">
+            <h4>Context</h4>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+            <br><br><a href="#">Find related resources</a>
+          </div>
+        </div>
+        <a href="#answerhere">Click here to enter your answer!</a>
+        <br>
+        <br>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="otherstudent panel-title"><b>Elise's Answer</b></h3><div class="reply"><a href="#">reply to this</a></div>
+          </div>
+          <div class="panel-body">
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+         </div>
+       </div>
+
+       <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><b>My Answer</b></h3>
+        </div>
+        <div class="panel-body">
+         <div id="submittedanswer"></div>
+       </div>
+     </div>
+     <p></p>
+     <a name="answerhere"></a>
+     <div class="form-group">
+      <label for="answerinput"><div id="typeherenote">Type your answer here!</div></label>
+      <form id="form" action="#" method="POST">
+        <textarea class="form-control" id="answerinput" rows="3"></textarea>
+        <p></p>
+        <div class="pull-right">
+          <button type="button" class="btn btn-primary" input id="enter">Enter</button>
+          <button type="button" class="btn btn-danger" id="clear">Clear My Answer</button>
+
+          <div id="alert"></div>
+        </div>
+        <form id="form" action="#" method="POST">
+        </div>
+
+        <script>
+          $('#enter').click( function() {
+           var Description = $('#answerinput').val();
+           if($("#answerinput").val() == '') {
+            $('#alert').html("You didn't type anything!");
+            $('#alert').fadeIn().delay(1000).fadeOut();
+            return false;
+          }
+          /*$('#submittedanswer').append(Description);*/
+          $('#submittedanswer').append(Description);
+          $('#form')[0].reset();
+          var submittedanswer = $('#submittedanswer').html();
+          localStorage.setItem('submittedanswer', submittedanswer);
+          return false;
+        });
+
+          if(localStorage.getItem('submittedanswer')) {
+            $('#submittedanswer').html(localStorage.getItem('submittedanswer'));
+          }
+
+          $('#clear').click( function() {
+            window.localStorage.clear();
+            location.reload();
+            return false;
+          });</script>
+
+          <br><br>
+        </div>
+      </div>
+
+    </body>

@@ -1,0 +1,52 @@
+.insides{
+	padding-left: 35px;
+	padding-right: 35px;
+
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+
+  background-color: #3b8a71;
+ }
+
+.btn-primary
+{
+  background-color: #459e82;
+  border-color: #367b65;
+}
+
+.jumbotron{
+	padding-top: 10px !important;
+	padding-bottom: : 10px !important;
+	border: 1px solid ;
+	border-color: #e7e7e7 ;
+
+}
+
+.breadcrumb{
+	background-color: inherit !important;
+}
+
+.panel a{
+	color:#4b719c;
+}
+
+.panel-heading h3 {
+ display: inline;
+}
+
+.reply{
+	float:right;
+}
+
+.form-control:hover{
+    text-decoration: none !important;
+
+}
+
+
+
+body{
+	font-family: "Arial";
+}
+
